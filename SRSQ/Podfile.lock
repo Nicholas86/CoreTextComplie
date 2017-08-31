@@ -1,0 +1,118 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - HappyDNS (0.3.10)
+  - INTULocationManager (4.2.0)
+  - LxDBAnything (1.1.0)
+  - Masonry (0.6.4)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.0.8)
+  - MOBFoundation (2.2.19)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
+  - Qiniu (7.1.5):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
+  - ReactiveCocoa (2.3.1):
+    - ReactiveCocoa/UI (= 2.3.1)
+  - ReactiveCocoa/Core (2.3.1):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.3.1)
+  - ReactiveCocoa/UI (2.3.1):
+    - ReactiveCocoa/Core
+  - RongCloudIM/IMKit (2.8.11):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.8.11)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - ShareSDK3 (3.6.3):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 3.6.3)
+  - ShareSDK3/ShareSDK (3.6.3):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.6.3):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo (3.6.3):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.3):
+    - MOBFoundation
+  - skpsmtpmessage (0.0.1)
+  - SVProgressHUD (2.1.2)
+  - UMengAnalytics-NO-IDFA (4.2.5)
+  - YLGIFImage (0.11)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - INTULocationManager
+  - LxDBAnything (~> 1.1.0)
+  - Masonry (~> 0.6.3)
+  - MBProgressHUD (~> 1.0.0)
+  - MJExtension
+  - MJRefresh (~> 3.0.2)
+  - MOBFoundation
+  - NJKWebViewProgress
+  - Qiniu (~> 7.1)
+  - ReactiveCocoa (= 2.3.1)
+  - RongCloudIM/IMKit (~> 2.8.3)
+  - RongCloudIM/IMLib (~> 2.8.3)
+  - SDCycleScrollView (~> 1.64)
+  - SDWebImage (~> 3.8.1)
+  - ShareSDK3
+  - ShareSDK3/ShareSDKPlatforms/QQ
+  - ShareSDK3/ShareSDKPlatforms/SinaWeibo
+  - ShareSDK3/ShareSDKPlatforms/WeChat
+  - skpsmtpmessage
+  - SVProgressHUD
+  - UMengAnalytics-NO-IDFA
+  - YLGIFImage (~> 0.11)
+  - YYKit (~> 1.0.7)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
+  INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
+  LxDBAnything: 154a2ad1ae32e70355d886b5443260543bb60c71
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  MOBFoundation: e962b2aee79e2b8f626e2d30c2f23e9f13e5331e
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  Qiniu: 77a3dba411556a383d72d17e842345a9d4c83252
+  ReactiveCocoa: 3fe9b233ca6db810e86681b5749488564c1179a1
+  RongCloudIM: b2b5aead4dca37ad8c2c06cea57d0a7321362cd0
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  ShareSDK3: d271520113160eb24b31cd642b45b38fcd592d93
+  skpsmtpmessage: f6e913380c784dd8d4a9f83c8790a302445a5e05
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: c1d4d78f12b260839ca9022786c2f0266823389a
+
+COCOAPODS: 1.2.1
