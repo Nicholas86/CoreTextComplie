@@ -120,15 +120,19 @@ static NSString * const findViewCellID = @"findViewCell";
 
 
 - (void)releaseLog {
+    /*
     SQReleaseActController *vc = [[SQReleaseActController alloc] init];
     WEAKSELF
     vc.releaseBlock = ^{
         [weakSelf.tableView.mj_header beginRefreshing];
     };
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:vc] animated:YES completion:nil];
+     */
 }
 
-
++ (void)load{
+    NSLog(@"美团调用初始化在这里操作,耗时长,美团建议减少使用这个方法。大家习惯不用这个方法了");
+}
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.contentOffset = self.tableView.contentOffset;
@@ -148,8 +152,10 @@ static NSString * const findViewCellID = @"findViewCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.953 alpha:1.000];
     
+    /*
     //导航栏右发布按钮
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"releaseDayLog"] style:UIBarButtonItemStylePlain target:self action:@selector(releaseLog)];
+     */
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FindViewCell class]) bundle:nil] forCellReuseIdentifier:findViewCellID];
