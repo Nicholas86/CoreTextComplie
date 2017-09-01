@@ -21,6 +21,7 @@
     return @{@"ID":@"id"};
 }
 
+//将内容转换成 富文本
 - (void)setActcontent:(NSString *)actcontent {
     _actcontent = actcontent;
     self.attActcontent = [self attributedTextWithText:actcontent];
@@ -43,28 +44,51 @@
     [self calculate];
 }
 
+/*
+ {
+ id : 46,
+ sex : 1,
+ acttime : 1494825085552,
+ width : 0,
+ rcuserid : 2017051513022633833347,
+ headimgurl : http://qzapp.qlogo.cn/qzapp/1105477680/0F58F230169BDD71D09E69418256DEF4/100,
+ actcontent : 新人报道啦,
+ photostr : ["20170515131116522.jpg","20170515131119588.jpg","20170515131120241.jpg","20170515131121144.jpg"],
+ height : 0,
+ sqlocal : 河南省金水区,
+ commoncount : 0,
+ account : qq149482454700WHRo-dwG-feZ7naYPIQqQw,
+ username : 锋.,
+ zancount : 1
+ },
+ 
+ */
+
 - (void)calculate {
     
     if (self.photostr.length > 1) {
         self.photos = [self.photostr mj_JSONObject];
         
-        NSMutableArray *bigImgArr = [NSMutableArray array];
-        NSMutableArray *thimbArr = [NSMutableArray array];
+        NSMutableArray *bigImgArr = [NSMutableArray array];//大图数组
+        NSMutableArray *thimbArr = [NSMutableArray array];//缩略图数组
+        
         for (NSString *str in self.photos) {
-            NSString *imgurl = [NSString stringWithFormat:@"%@%@",QiniuHeader,str];
-            NSString *thimg = [NSString stringWithFormat:@"%@%@",imgurl,QiniuSub];
-            [bigImgArr addObject:imgurl];
-            [thimbArr addObject:thimg];
+            NSString *imgurl = [NSString stringWithFormat:@"%@%@",QiniuHeader,str];//前缀
+            NSString *thimg = [NSString stringWithFormat:@"%@%@",imgurl,QiniuSub];//后缀
+            [bigImgArr addObject:imgurl]; //将前缀图片放在大图数组
+            [thimbArr addObject:thimg]; //完整图片放在缩略图数组
         }
-        self.photos = [NSArray arrayWithArray:bigImgArr]; // 大图
-        self.thimbimgPhotos = [NSArray arrayWithArray:thimbArr];
+        
+        self.photos = [NSArray arrayWithArray:bigImgArr]; // 保存 前缀图片 大图数组
+        self.thimbimgPhotos = [NSArray arrayWithArray:thimbArr];//保存 完整图片 缩略图
         if (self.photos.count == 1) {
             self.thimbimgPhotos = [NSArray arrayWithArray:bigImgArr];
         } else {
             
         }
     }
-    [self calculateImageSize:self.thimbimgPhotos];
+    
+    [self calculateImageSize:self.thimbimgPhotos]; //计算缩略图尺寸
 }
 
 
@@ -76,8 +100,11 @@
 
 
 - (void)calculateImageSize:(NSArray *)picModel {
+    
     NSInteger count = picModel.count;
+    
     CGFloat margin = 5;
+    
     if (count == 0) {
         self.photoViewSize = self.photoViewLayotSize = CGSizeZero;
     } else if (count == 1) {
@@ -236,6 +263,7 @@
     
     return attributedText;
 }
+
 @end
 
 

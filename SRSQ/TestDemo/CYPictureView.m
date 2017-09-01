@@ -37,7 +37,7 @@ static NSString *picID = @"CYPictureViewCellID";
 - (void)setPicModel:(NSArray *)picModel {
     _picModel = picModel;
     
-    [self reloadData];
+    [self reloadData];//刷新数据
 }
 
 - (void)setupPhotoViewLayout:(CGSize)layoutSize {
@@ -115,3 +115,8 @@ static NSString *picID = @"CYPictureViewCellID";
 }
 
 @end
+
+
+
+
+
