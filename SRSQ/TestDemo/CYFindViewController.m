@@ -425,6 +425,7 @@ static NSString * const findViewCellID = @"findViewCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    /*
     FindUserModel *find = self.dataArray[indexPath.row];
     // 跳转到与该用户聊天界面
     CYUserModel *model = [[CYUserModel alloc] init];
@@ -444,7 +445,7 @@ static NSString * const findViewCellID = @"findViewCell";
     CYConnecViewController *vc = [[CYConnecViewController alloc] initWithConversationType:ConversationType_PRIVATE targetId:model.rcuserid];
     vc.title = model.username;
     [self.navigationController pushViewController:vc animated:YES];
-    
+    */
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     FindUserModel *model = self.dataArray[indexPath.row];
